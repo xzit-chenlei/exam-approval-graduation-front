@@ -1,6 +1,7 @@
 import JSEncrypt from 'jsencrypt/bin/jsencrypt.min'
 
-// 密钥对生成 http://web.chacuo.net/netrsakeypair
+// 登录口令加密用 RSA 密钥对（需与后端约定一致；开源仓库内为历史演示用密钥，生产环境务必自行生成并替换）。
+// 密钥对生成可参考 http://web.chacuo.net/netrsakeypair
 
 const publicKey = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKoR8mX0rGKLqzcWmOzbfj64K8ZIgOdH\n' +
   'nzkXSOVOZbFu/TJhZ7rFAN+eaGkl3C4buccQd/EjEsj9ir7ijT7h96MCAwEAAQ=='

@@ -9,11 +9,11 @@
       <template v-if="device!=='mobile'">
         <search id="header-search" class="right-menu-item" />
 
-        <el-tooltip content="源码地址" effect="dark" placement="bottom">
+        <el-tooltip v-if="projectRepoUrl" content="源码地址" effect="dark" placement="bottom">
           <ruo-yi-git id="ruoyi-git" class="right-menu-item hover-effect" />
         </el-tooltip>
 
-        <el-tooltip content="文档地址" effect="dark" placement="bottom">
+        <el-tooltip v-if="projectDocUrl" content="文档地址" effect="dark" placement="bottom">
           <ruo-yi-doc id="ruoyi-doc" class="right-menu-item hover-effect" />
         </el-tooltip>
 
@@ -56,6 +56,7 @@ import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
 import RuoYiGit from '@/components/RuoYi/Git'
 import RuoYiDoc from '@/components/RuoYi/Doc'
+import defaultSettings from '@/settings'
 
 export default {
   components: {
@@ -89,6 +90,12 @@ export default {
       get() {
         return this.$store.state.settings.topNav
       }
+    },
+    projectRepoUrl() {
+      return defaultSettings.projectRepoUrl
+    },
+    projectDocUrl() {
+      return defaultSettings.projectDocUrl
     }
   },
   methods: {

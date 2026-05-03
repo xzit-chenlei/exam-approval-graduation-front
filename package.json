@@ -1,11 +1,12 @@
 {
-  "name": "ruoyi",
+  "name": "exam-approval-graduation-front",
   "version": "3.8.7",
-  "description": "若依管理系统",
-  "author": "若依",
-  "license": "MIT",
+  "description": "考试审批与毕业达成度系统",
+  "author": "徐州工程学院",
+  "license": "Apache License 2.0",
   "scripts": {
-    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "windows-dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
@@ -31,10 +32,6 @@
     "admin-template",
     "management-system"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://gitee.com/y_project/RuoYi-Vue.git"
-  },
   "dependencies": {
     "@js-preview/docx": "^1.6.4",
     "@riophae/vue-treeselect": "0.4.0",

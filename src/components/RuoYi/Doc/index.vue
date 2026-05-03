@@ -5,11 +5,13 @@
 </template>
 
 <script>
+import defaultSettings from '@/settings'
+
 export default {
   name: 'RuoYiDoc',
   data() {
     return {
-      url: 'http://doc.ruoyi.vip/ruoyi-vue'
+      url: defaultSettings.projectDocUrl
     }
   },
   methods: {

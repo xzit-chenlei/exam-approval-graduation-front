@@ -40,5 +40,15 @@ module.exports = {
    * The default is only used in the production env
    * If you want to also use it in dev, you can pass ['production', 'development']
    */
-  errorLog: 'production'
+  errorLog: 'production',
+
+  /**
+   * 顶部导航「源码」外链（来自环境变量 VUE_APP_PROJECT_REPO），留空则不显示图标
+   */
+  projectRepoUrl: process.env.VUE_APP_PROJECT_REPO || '',
+
+  /**
+   * 顶部导航「文档」外链（来自环境变量 VUE_APP_PROJECT_DOC），留空则不显示图标
+   */
+  projectDocUrl: process.env.VUE_APP_PROJECT_DOC || ''
 }
